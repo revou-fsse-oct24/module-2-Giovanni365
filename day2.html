@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Various article about workplace">
+        <meta name="keywords" content="Remote Work, Mental Health, Communication">
+        <meta name="author" content="Giovanni">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script>
+            tailwind.config = {
+                theme: {
+                    fontFamily: {
+                        sourgummy: ['Sour Gummy', 'sans-serif'],
+                    }
+                }
+            }
+        </script>
+        <style>
+            @keyframes Title {
+                    from {
+                        margin-right:100%;
+                    }
+                    to {
+                        margin-left:100%;
+                    }
+                }
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <title>Workaholic</title>
+    </head>
+    <body class="scroll-smooth font-sourgummy">
+        <header>
+            <nav></nav>
+            <div class="w-full bg-gray-200 flex flex-col justify-center items-center">
+                <h1 class="text-3xl font-bold" style="animation-name: Title; animation-duration: 3s; animation-iteration-count: infinite;">Workaholic</h1>
+                <div class="bg-orange-400 m-4 w-56 h-px"></div>
+                <p>A blog about articles of Workplace. We share experience, tips and many article you need to know!</p>
+                <div class="flex items-center justify-center rounded-lg border-gray-200 bg-white m-4">
+                    <i class="fa-solid fa-magnifying-glass m-2"></i>
+                    <input type="text" class="w-full max-w-56 bg-white px-2 text-base font-semibold outline-0" placeholder="" id="">
+                    <input type="button" value="Search" class="bg-blue-500 p-2 rounded-tr-lg rounded-br-lg text-white font-semibold hover:bg-blue-800 ">
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class = "container mx-auto px-4">
+                <h1 class ="text-3xl font-bold mb-8">Best of the Week</h1>
+                <div class="flex flex-col gap-5 w-3/4 md:flex-row md:mx-40 md:items-center">
+                    <article class="shadow-md rounded-2xl overflow-hidden flex-2 hover:shadow-black">
+                        <img src="./Asset/Communication.png" alt="Communication" class="w-full md:shrink-0 hover:">
+                        <div class="p-4">
+                            <h3 class="px-8 pt-16 text-3xl font-bold">Workplace Communication: Effective Practices for Building Strong Teams</h3>
+                            <p class="px-8 py-4 text-justify">In today's fast-paced, often digital work environment, clear and effective communication is more essential than ever 
+                            for building cohesive, high-performing teams. Effective workplace communication doesn't just make daily tasks smoother 
+                            it fosters trust, collaboration, and a positive work culture. This article explores the best practices that can strengthen 
+                            team communication, from improving leadership approaches to harnessing the right tools.</p>
+                            <button class="cursor-pointer transition-all bg-blue-600 text-white px-6 py-1 mx-8 my-4 rounded-lg border-blue-900 border-b-[4px] 
+                            hover:bg-gray-200 active:border-b-[2px] active:bg-gray-200 active:translate-y-[1px]">Read More</button>
+                        </div>
+                    </article>
+                    <div class="flex flex-col md:flex-col gap-2">
+                        <article class="shadow-md rounded-2xl overflow-hidden flex-1">
+                            <img src="./Asset/Remote Working.jpg" alt="Remote" class="w-full md:shrink-0">
+                            <div class="p-4">
+                                <h3 class="px-8 pt-4 text-lg font-bold">The Rise of Remote Work: Benefits, Challenges, and the Future</h3>
+                                <button class="cursor-pointer transition-all bg-blue-600 text-white px-6 py-1 mx-8 my-4 rounded-lg border-blue-900 border-b-[4px] 
+                            hover:bg-gray-200 active:border-b-[2px] active:bg-gray-200 active:translate-y-[1px]">Read More</button>
+                            </div>
+                        </article>
+                        <article class="shadow-md rounded-2xl overflow-hidden flex-1">
+                            <img src="./Asset/Mental Health.jpg" alt="Mental Health" class="w-full h-3/6 md:shrink-0">
+                            <div class="p-4">
+                                <h3 class="px-8 pt-4 text-lg font-bold">Mental Health in the Workplace: Creating a Supportive Environment</h3>
+                                <button class="cursor-pointer transition-all bg-blue-600 text-white px-6 py-1 mx-8 my-4 rounded-lg border-blue-900 border-b-[4px] 
+                            hover:bg-gray-200 active:border-b-[2px] active:bg-gray-200 active:translate-y-[1px]">Read More</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class = "container mx-auto px-4">
+                <h1 class ="text-3xl font-bold mt-4">Latest-Post</h1>
+                <div class="grid grid-cols-1 grid-rows-1 md:grid-cols-3 md:grid-rows-3 gap-6 p-6">
+                    <div class="bg-[url('Asset/Positive%20workplace.jpg')] bg-cover p-6 rounded-lg shadow-lg h-40 w-full">
+                        <h3 class="text-lg md:text-2xl font-bold" style="text-shadow: 2px 2px #8b8f1f">Building a Positive Workplace Culture: Strategies for Success</h3>
+                    </div>
+                    <div class="bg-[url('Asset/Workplace.jpg')] bg-cover p-6 rounded-lg shadow-lg col-span-1 md:col-span-2 h-40 text-xs">
+                        <h3 class="text-lg md:text-2xl font-bold" style="text-shadow: 2px 2px #8b8f1f">Managing Workplace Stress: Techniques to Improve Mental Health and Productivity</h3>
+                    </div>
+                    <div class="bg-[url('Asset/Workplace-2.jpg')] bg-cover p-6 rounded-lg shadow-lg row-span-1 md:row-span-2 h-80">
+                        <h3 class="text-lg md:text-2xl font-bold align-middle" style="text-shadow: 2px 2px #8b8f1f">Upskilling and Reskilling: Why Continuous Learning is Key for Career Growth</h3>
+                    </div>
+                    <div class="bg-[url('Asset/Conflict-Resolution.jpg')] bg-cover p-4 rounded-lg shadow-lg h-40 md:row-span-1">
+                        <h3 class="text-lg md:text-2xl font-bold align-middle" style="text-shadow: 2px 2px #8b8f1f">Conflict Resolution in the Workplace: How to Handle Disagreements Productively</h3>
+                    </div>
+                    <div class="bg-[url('Asset/Diversity.jpeg')] bg-cover p-4 rounded-lg shadow-lg h-80 md:row-span-2">
+                        <h3 class="text-lg md:text-2xl font-bold align-middle" style="text-shadow: 2px 2px #8b8f1f">Workplace Diversity and Inclusion: Creating an Equitable Environment for All</h3>
+                    </div>
+                    <picture>
+                        <source srcset="Asset/Background%201.jpg" media="(max-width: 767px)">
+                        <img src="./Asset/Background 2-1.jpg" media="(min-width: 768px)" alt="Background" class="rounded-lg shadow-lg h-32 md:col-span-2 w-full">
+                    </picture>
+                </div>
+            </section>
+            <footer class="mt-8 bg-zinc-200 w-full flex flex-row justify-between items-center h-72">
+                <img src="./Asset/Workaholic.png" class="w-36 h-36">
+                <ul class="list-disc">
+                    <li>
+                        <a href="#">Remote Working</a>
+                    </li>
+                    <li>
+                        <a href="#">Mental Health</a>
+                    </li>
+                    <li>
+                        <a href="#">Comunication</a>
+                    </li>
+                    <li>
+                        <a href="#">Diversity and Inclusion</a>
+                    </li>
+                    <li>
+                        <a href="#">Upskilling</a>
+                    </li>
+                </ul>
+            </footer>
+        </main>
+        
+    </body>
+</html>
