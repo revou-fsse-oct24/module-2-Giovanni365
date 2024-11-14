@@ -19,22 +19,20 @@
                 }
             }
         </script>
-        <style>
-            @keyframes Title {
-                    from {
-                        margin-right:100%;
-                    }
-                    to {
-                        margin-left:100%;
-                    }
-                }
-        </style>
+        <style type="text/tailwindcss">
+            @layer footer {
+              .footer-auto {
+                @apply mt-8 bg-zinc-200 w-full flex flex-row justify-start items-center h-72 gap-10;
+              }
+            }
+          </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <title>Workaholic</title>
     </head>
     <body class="scroll-smooth font-sourgummy">
-        <header class="w-full bg-gray-200 ">
-            <nav class="h-16 fixed bg-gray-400 w-full">
+        <header class="w-full bg-purple-500">
+            <nav class="flex justify-between h-16 fixed bg-purple-700 w-full z-10 py-3 px-12">
+                <img src="./Asset/Workaholic.png" class="w-18 h-12">
                 <ul class="flex flex-row gap-20 text-3xl justify-center">
                     <li class="hover:font-bold">
                         <a href="#">Home</a>
@@ -46,24 +44,43 @@
                         <a href="#">Latest Post</a>
                     </li>
                 </ul>
+                <button id="hamburger" class="lg:hidden"><i class="fa-solid fa-bars fa-xl"></i></button>
             </nav>
+            <div id="sidebar" class="fixed w-[256px] left-0 h-full bg-gray-400 z-20 lg:hidden -translate-x-full">
+                <button id="close" class="absolute top-4 right-4">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="px-5 py-10">
+                    <ul class="space-y-4">
+                        <li class="hover:font-bold">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="hover:font-bold">
+                            <a href="#">Featured Post</a>
+                        </li>
+                        <li class="hover:font-bold">
+                            <a href="#">Latest Post</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <div class="pt-20 flex flex-col justify-center items-center">
-                <h1 class="text-3xl font-bold" style="animation-name: Title; animation-duration: 3s; animation-iteration-count: infinite;">Workaholic</h1>
-                <div class="bg-orange-400 m-4 w-56 h-px"></div>
+                <h1 class="text-4xl font-bold">WORKAHOLIC BLOG</h1>
+                <div class="bg-purple-950 m-4 w-56 h-px"></div>
                 <p>A blog about articles of Workplace. We share experience, tips and many article you need to know!</p>
-                <div class="flex items-center justify-center rounded-lg border-gray-200 bg-white m-4">
-                    <i class="fa-solid fa-magnifying-glass m-2"></i>
+                <div class="flex items-center justify-center rounded-lg border-gray-200 bg-white m-4 relative">
+                    <i class="fa-solid fa-magnifying-glass left-2 absolute"></i>
                     <input type="text" class="w-full max-w-56 bg-white px-2 text-base font-semibold outline-0" placeholder="" id="">
                     <input type="button" value="Search" class="bg-blue-500 p-2 rounded-tr-lg rounded-br-lg text-white font-semibold hover:bg-blue-800 ">
                 </div>
             </div>
         </header>
-        <main>
+        <main class="bg-purple-200">
             <section class = "container mx-auto px-4">
                 <h1 class ="text-3xl font-bold mb-8 text-center">Featured Post</h1>
-                <div class="flex flex-col gap-5 w-3/4 md:flex-row md:mx-40 md:items-center">
-                    <article class="shadow-md rounded-2xl overflow-hidden flex-2 hover:shadow-black">
-                        <img src="./Asset/Communication.png" alt="Communication" class="w-full md:shrink-0 hover:">
+                <div class="grid lg:grid-cols-3 gap-4">
+                    <article class="lg:col-span-2 shadow-md rounded-2xl overflow-hidden hover:shadow-black">
+                        <img src="./Asset/Communication.png" alt="Communication" class="w-full md:shrink-0">
                         <div class="p-4">
                             <h3 class="px-8 pt-16 text-3xl font-bold">Workplace Communication: Effective Practices for Building Strong Teams</h3>
                             <p class="px-8 py-4 text-justify">In today's fast-paced, often digital work environment, clear and effective communication is more essential than ever 
@@ -74,8 +91,8 @@
                             hover:bg-gray-200 active:border-b-[2px] active:bg-gray-200 active:translate-y-[1px]">Read More</button>
                         </div>
                     </article>
-                    <div class="flex flex-col md:flex-col gap-2">
-                        <article class="shadow-md rounded-2xl overflow-hidden flex-1 hover:shadow-black">
+                    <div class="lg:col-span-1">
+                        <article class="shadow-md rounded-2xl overflow-hidden hover:shadow-black mb-4">
                             <img src="./Asset/Remote Working.jpg" alt="Remote" class="w-full md:shrink-0">
                             <div class="p-4">
                                 <h3 class="px-8 pt-4 text-lg font-bold">The Rise of Remote Work: Benefits, Challenges, and the Future</h3>
@@ -83,7 +100,7 @@
                             hover:bg-gray-200 active:border-b-[2px] active:bg-gray-200 active:translate-y-[1px]">Read More</button>
                             </div>
                         </article>
-                        <article class="shadow-md rounded-2xl overflow-hidden flex-1 hover:shadow-black">
+                        <article class="shadow-md rounded-2xl overflow-hidden hover:shadow-black">
                             <img src="./Asset/Mental Health.jpg" alt="Mental Health" class="w-full h-3/6 md:shrink-0">
                             <div class="p-4">
                                 <h3 class="px-8 pt-4 text-lg font-bold">Mental Health in the Workplace: Creating a Supportive Environment</h3>
@@ -94,63 +111,39 @@
                     </div>
                 </div>
             </section>
+            <!--coba-->
             <section class = "container mx-auto px-4">
                 <h1 class ="text-3xl font-bold mt-4 text-center">Latest Post</h1>
                 <div class="grid grid-cols-1 grid-rows-1 md:grid-cols-3 md:grid-rows-3 gap-6 p-6">
-                    <div class="bg-[url('Asset/Positive%20workplace.jpg')] bg-cover p-6 rounded-lg shadow-lg h-40 w-full">
+                    <div class="bg-[url('Asset/Positive%20workplace.jpg')] bg-cover p-6 rounded-lg shadow-lg h-40 w-full hover:scale-105 transition-transform">
                         <h3 class="text-lg md:text-2xl font-bold" style="text-shadow: 2px 2px #8b8f1f">Building a Positive Workplace Culture: Strategies for Success</h3>
                     </div>
-                    <div class="bg-[url('Asset/Workplace.jpg')] bg-cover p-6 rounded-lg shadow-lg col-span-1 md:col-span-2 h-40 text-xs">
+                    <div class="bg-[url('Asset/Workplace.jpg')] bg-cover p-6 rounded-lg shadow-lg col-span-1 md:col-span-2 h-40 text-xs hover:scale-105 transition-transform">
                         <h3 class="text-lg md:text-2xl font-bold" style="text-shadow: 2px 2px #8b8f1f">Managing Workplace Stress: Techniques to Improve Mental Health and Productivity</h3>
                     </div>
-                    <div class="bg-[url('Asset/Workplace-2.jpg')] bg-cover p-6 rounded-lg shadow-lg row-span-1 md:row-span-2 h-80">
+                    <div class="bg-[url('Asset/Workplace-2.jpg')] bg-cover p-6 rounded-lg shadow-lg row-span-1 md:row-span-2 h-80 hover:scale-105 transition-transform">
                         <h3 class="text-lg md:text-2xl font-bold align-middle" style="text-shadow: 2px 2px #8b8f1f">Upskilling and Reskilling: Why Continuous Learning is Key for Career Growth</h3>
                     </div>
-                    <div class="bg-[url('Asset/Conflict-Resolution.jpg')] bg-cover p-4 rounded-lg shadow-lg h-40 md:row-span-1">
+                    <div class="bg-[url('Asset/Conflict-Resolution.jpg')] bg-cover p-4 rounded-lg shadow-lg h-40 md:row-span-1 hover:scale-105 transition-transform">
                         <h3 class="text-lg md:text-2xl font-bold align-middle" style="text-shadow: 2px 2px #8b8f1f">Conflict Resolution in the Workplace: How to Handle Disagreements Productively</h3>
                     </div>
-                    <div class="bg-[url('Asset/Diversity.jpeg')] bg-cover p-4 rounded-lg shadow-lg h-80 md:row-span-2">
+                    <div class="bg-[url('Asset/Diversity.jpeg')] bg-cover p-4 rounded-lg shadow-lg h-80 md:row-span-2 hover:scale-105 transition-transform">
                         <h3 class="text-lg md:text-2xl font-bold align-middle" style="text-shadow: 2px 2px #8b8f1f">Workplace Diversity and Inclusion: Creating an Equitable Environment for All</h3>
                     </div>
                     <picture>
-                        <source srcset="Asset/Background%201.jpg" media="(max-width: 767px)">
-                        <img src="./Asset/Background 2-1.jpg" media="(min-width: 768px)" alt="Background" class="rounded-lg shadow-lg h-32 md:col-span-2 w-full">
+                        <source srcset="Asset%20Checkpoint/Background%201.jpg" media="(max-width: 767px)">
+                        <img src="./Asset Checkpoint #1/Background 2-1.jpg" media="(min-width: 768px)" alt="Background" class="rounded-lg shadow-lg h-32 md:col-span-2 w-full">
                     </picture>
                 </div>
             </section>
-            <footer class="mt-8 bg-zinc-200 w-full flex flex-row justify-start items-center h-72 gap-10">
-                <img src="./Asset/Workaholic.png" class="w-36 h-28">
-                <ul class="list-disc">
-                    <li>
-                        <a href="#">Remote Working</a>
-                    </li>
-                    <li>
-                        <a href="#">Mental Health</a>
-                    </li>
-                    <li>
-                        <a href="#">Comunication</a>
-                    </li>
-                    <li>
-                        <a href="#">Diversity and Inclusion</a>
-                    </li>
-                </ul>
-                <ul class="list-disc">
-                    <li>
-                        <a href="#">Workplace Stress</a>
-                    </li>
-                    <li>
-                        <a href="#">Conflict Resolution</a>
-                    </li>
-                    <li>
-                        <a href="#">Positive Workplace</a>
-                    </li>
-                    <li>
-                        <a href="#">Upskilling</a>
-                    </li>
-                </ul>
+            <footer class="footer-auto bg-purple-500">
                 <p class="text-lg text-center">&copy; 2024 Workaholic, All rights reserved.</p>
             </footer>
         </main>
-        
+        <script>
+            const sidebar = document.getElementById("sidebar");
+            const hambugerbutton = document.getElementById("hamburger");
+            const closebutton = document.getElementById("close");
+        </script>
     </body>
 </html>
