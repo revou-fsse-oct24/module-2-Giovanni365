@@ -34,7 +34,7 @@
             <div class="px-8 py-4">
                 <nav class="flex justify-between h-20 fixed w-[95%] bg-purple-400 z-10 rounded-[50px] items-center px-4">
                     <img src="./Asset/Workaholic.png" class="w-20 h-16">
-                    <ul class="flex flex-row gap-16 text-2xl text-white justify-center py-3 pr-8">
+                    <ul class="lg:flex flex-row gap-16 text-2xl text-white justify-center py-3 pr-24 lg:pl-8 hidden">
                         <li class="hover:font-bold">
                             <a href="#">Office Space</a>
                         </li>
@@ -54,7 +54,7 @@
                     <button id="hamburger" class="lg:hidden"><i class="fa-solid fa-bars fa-xl"></i></button>
                 </nav>
             </div>
-            <div id="sidebar" class="fixed w-[256px] left-0 h-full bg-gray-400 z-20 lg:hidden -translate-x-full">
+            <div id="sidebar" class="fixed w-[256px] left-0 top-0 h-full bg-purple-400 z-20 lg:hidden transform -translate-x-full">
                 <button id="close" class="absolute top-4 right-4">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
@@ -90,44 +90,66 @@
             </div>
         </header>
         <main class="bg-purple-200">
-            <section class="container p-8">
-                <div class="relative mx-0 my-auto">
-                    <div class="flex overflow-hidden overflow-x-auto snap-center snap-mandatory rounded-lg w-1/2 items-center">
-                        <img id="Slide-1" src="Asset/Communication.png" alt="Communication" class="flex-1 w-[900px] h-[650px]">
-                        <img id="Slide-2" src="Asset/Remote Working.jpg" alt="Remote Working" class="flex-1 w-[900px] h-[650px]">
-                        <img id="Slide-3" src="Asset/Mental Health.jpg" alt="Mental Health" class="flex-1w-[900px] h-[650px]">
-                        <img id="Slide-4" src="Asset/Teamwork.jpeg" alt="Teamwork" class="flex-1 w-[900px] h-[650px]">
-                    </div>
-                    <div class="flex gap-px absolute bottom-5 left-1/4 z-10">
-                        <a href="#Slide-1" class="w-2 h-2 rounded-[50%] bg-gray-50"></a>
-                        <a href="#Slide-2" class="w-2 h-2 rounded-[50%] bg-gray-50"></a>
-                        <a href="#Slide-3" class="w-2 h-2 rounded-[50%] bg-gray-50"></a>
-                        <a href="#Slide-4" class="w-2 h-2 rounded-[50%] bg-gray-50"></a>
+            <section class = "container mx-auto px-4">
+                <h1 class ="text-3xl font-bold mb-8 text-center">Featured Post</h1>
+                <div class="grid lg:grid-cols-3 gap-4">
+                    <article class="lg:col-span-2 shadow-md rounded-2xl overflow-hidden hover:shadow-black">
+                        <img src="./Asset/Communication.png" alt="Communication" class="w-full md:shrink-0">
+                        <div class="p-4">
+                            <h3 class="px-8 pt-16 text-3xl font-bold">Workplace Communication: Effective Practices for Building Strong Teams</h3>
+                            <p class="px-8 py-4 text-justify">In today's fast-paced, often digital work environment, clear and effective communication is more essential than ever 
+                            for building cohesive, high-performing teams. Effective workplace communication doesn't just make daily tasks smoother 
+                            it fosters trust, collaboration, and a positive work culture. This article explores the best practices that can strengthen 
+                            team communication, from improving leadership approaches to harnessing the right tools.</p>
+                            <button class="cursor-pointer transition-all bg-blue-600 text-white px-6 py-1 mx-8 my-4 rounded-lg border-blue-900 border-b-[4px] 
+                            hover:bg-gray-200 active:border-b-[2px] active:bg-gray-200 active:translate-y-[1px]">Read More</button>
+                        </div>
+                    </article>
+                    <div class="lg:col-span-1">
+                        <article class="shadow-md rounded-2xl overflow-hidden hover:shadow-black mb-4">
+                            <img src="./Asset/Remote Working.jpg" alt="Remote" class="w-full md:shrink-0">
+                            <div class="p-4">
+                                <h3 class="px-8 pt-4 text-lg font-bold">The Rise of Remote Work: Benefits, Challenges, and the Future</h3>
+                                <button class="cursor-pointer transition-all bg-blue-600 text-white px-6 py-1 mx-8 my-4 rounded-lg border-blue-900 border-b-[4px] 
+                            hover:bg-gray-200 active:border-b-[2px] active:bg-gray-200 active:translate-y-[1px]">Read More</button>
+                            </div>
+                        </article>
+                        <article class="shadow-md rounded-2xl overflow-hidden hover:shadow-black">
+                            <img src="./Asset/Mental Health.jpg" alt="Mental Health" class="w-full h-3/6 md:shrink-0">
+                            <div class="p-4">
+                                <h3 class="px-8 pt-4 text-lg font-bold">Mental Health in the Workplace: Creating a Supportive Environment</h3>
+                                <button class="cursor-pointer transition-all bg-blue-600 text-white px-6 py-1 mx-8 my-4 rounded-lg border-blue-900 border-b-[4px] 
+                            hover:bg-gray-200 active:border-b-[2px] active:bg-gray-200 active:translate-y-[1px]">Read More</button>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </section>
             <section class = "container mx-auto px-4">
                 <h1 class ="text-3xl font-bold mt-4 text-center">Latest Post</h1>
-                <div class="grid grid-cols-1 grid-rows-1 md:grid-cols-3 md:grid-rows-3 gap-6 p-6">
-                    <div class="bg-[url('Asset/Positive%20workplace.jpg')] bg-cover p-6 rounded-lg shadow-lg h-40 w-full hover:scale-105 transition-transform">
+                <div class="grid grid-cols-1 grid-rows-1 lg:grid-cols-6 lg:grid-rows-2 gap-4 p-6">
+                    <div class="bg-[url('Asset/Positive%20workplace.jpg')] bg-cover p-6 rounded-lg shadow-lg h-96 lg:row-span-3 lg:col-span-2 w-full hover:scale-105 transition-transform">
                         <h3 class="text-lg md:text-2xl font-bold" style="text-shadow: 2px 2px #8b8f1f">Building a Positive Workplace Culture: Strategies for Success</h3>
                     </div>
-                    <div class="bg-[url('Asset/Workplace.jpg')] bg-cover p-6 rounded-lg shadow-lg col-span-1 md:col-span-2 h-40 text-xs hover:scale-105 transition-transform">
+                    <div class="bg-[url('Asset/Workplace.jpg')] bg-cover p-6 rounded-lg shadow-lg h-96 lg:row-span-3 lg:col-span-2 hover:scale-105 transition-transform">
                         <h3 class="text-lg md:text-2xl font-bold" style="text-shadow: 2px 2px #8b8f1f">Managing Workplace Stress: Techniques to Improve Mental Health and Productivity</h3>
                     </div>
-                    <div class="bg-[url('Asset/Workplace-2.jpg')] bg-cover p-6 rounded-lg shadow-lg row-span-1 md:row-span-2 h-80 hover:scale-105 transition-transform">
+                    <div class="bg-[url('Asset/Workplace-2.jpg')] bg-cover p-6 rounded-lg shadow-lg h-96 overflow-hidden lg:row-span-3 lg:col-span-2 hover:scale-105 transition-transform">
                         <h3 class="text-lg md:text-2xl font-bold align-middle" style="text-shadow: 2px 2px #8b8f1f">Upskilling and Reskilling: Why Continuous Learning is Key for Career Growth</h3>
                     </div>
-                    <div class="bg-[url('Asset/Conflict-Resolution.jpg')] bg-cover p-4 rounded-lg shadow-lg h-40 md:row-span-1 hover:scale-105 transition-transform">
+                    <div class="bg-[url('Asset/Conflict-Resolution.jpg')] bg-cover p-4 rounded-lg shadow-lg h-96 lg:row-span-3 lg:col-span-2 hover:scale-105 transition-transform">
                         <h3 class="text-lg md:text-2xl font-bold align-middle" style="text-shadow: 2px 2px #8b8f1f">Conflict Resolution in the Workplace: How to Handle Disagreements Productively</h3>
                     </div>
-                    <div class="bg-[url('Asset/Diversity.jpeg')] bg-cover p-4 rounded-lg shadow-lg h-80 md:row-span-2 hover:scale-105 transition-transform">
+                    <div class="bg-[url('Asset/Diversity.jpeg')] bg-cover p-4 rounded-lg shadow-lg h-96 lg:row-span-3 lg:col-span-2 hover:scale-105 transition-transform">
                         <h3 class="text-lg md:text-2xl font-bold align-middle" style="text-shadow: 2px 2px #8b8f1f">Workplace Diversity and Inclusion: Creating an Equitable Environment for All</h3>
                     </div>
-                    <picture>
-                        <source srcset="Asset%20Checkpoint/Background%201.jpg" media="(max-width: 767px)">
-                        <img src="./Asset Checkpoint #1/Background 2-1.jpg" media="(min-width: 768px)" alt="Background" class="rounded-lg shadow-lg h-32 md:col-span-2 w-full">
-                    </picture>
+                    <div class="bg-[url('Asset/Leadership.jpg')] bg-cover p-4 rounded-lg shadow-lg h-96 lg:row-span-3 lg:col-span-2 hover:scale-105 transition-transform">
+                        <h3 class="text-lg md:text-2xl font-bold align-middle" style="text-shadow: 2px 2px #8b8f1f">Leadership Styles That Foster a Healthy Workplace Environment</h3>
+                    </div>
+                </div>
+                <div class="lg:flex items-center justify-center">
+                    <button class="cursor-pointer transition-all bg-blue-600 text-white px-6 py-1 mx-8 my-4 rounded-lg border-blue-900 border-b-[4px] 
+                hover:bg-gray-200 active:border-b-[2px] active:bg-gray-200 active:translate-y-[1px]">See More</button>
                 </div>
             </section>
             <footer class="h-24 bg-purple-500">
@@ -136,8 +158,14 @@
         </main>
         <script>
             const sidebar = document.getElementById("sidebar");
-            const hambugerbutton = document.getElementById("hamburger");
-            const closebutton = document.getElementById("close");
+            const hamburger = document.getElementById("hamburger");
+            const close = document.getElementById("close");
+            hamburger.addEventListener("click", () => {
+                sidebar.classList.remove("-translate-x-full");
+            });
+            close.addEventListener("click", () =>{
+                sidebar.classList.add("-translate-x-full");
+            });
         </script>
     </body>
 </html>
